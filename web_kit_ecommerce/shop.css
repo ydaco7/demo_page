@@ -1,0 +1,266 @@
+   /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* HEADER - Usando flexbox */
+        header {
+            background: rgb(0, 2, 12);
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ebecee;
+        }
+
+        .cart {
+            background: #3c3c9b;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .cart:hover {
+            background: #070e47;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #464179 0%, #488eb6 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* TÍTULO SECCIÓN */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #1c0591;
+        }
+
+        /* GRID DE PRODUCTOS - Usando flexbox */
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        /* TARJETA DE PRODUCTO */
+        .product-card {
+            background: rgb(254, 254, 255);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 280px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        /* IMAGEN DEL PRODUCTO */
+        .product-image {
+            height: 200px;
+            background: #c9cbd8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+        }
+
+        /* BADGE DE OFERTA - Usando position */
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4757;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* CONTENIDO DE LA TARJETA */
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #2d305a;
+        }
+
+        .product-description {
+            color: #3e3956;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* PRECIO Y BOTÓN - Usando flexbox */
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #17159d;
+        }
+
+        .btn-add {
+            background: #4a8feb;
+            color: rgb(64, 57, 124);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-add:hover {
+            background: #4c44a6;
+        }
+
+        /* SECCIÓN DESTACADA - Usando float */
+        .featured-section {
+            background: white;
+            margin: 4rem auto;
+            max-width: 800px;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .featured-image {
+            width: 200px;
+            height: 150px;
+            background: #d8d8e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            float: left;
+            margin-right: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-content h3 {
+            font-size: 1.5rem;
+            color: #200f66;
+            margin-bottom: 1rem;
+        }
+
+        .featured-content p {
+            color: #8989a9;
+            line-height: 1.6;
+        }
+
+        /* Clearfix para float */
+        .featured-section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #3f4f9f;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .products-grid {
+                gap: 1rem;
+            }
+
+            .product-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .featured-image {
+                float: none;
+                margin: 0 auto 1rem auto;
+            }
+
+            .featured-section {
+                text-align: center;
+            }
+        }
